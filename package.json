@@ -11,6 +11,6 @@
   "author": "Maxim",
   "license": "ISC",
   "devDependencies": {
-    "ws": "^5.1.1"
+    "ws": "^4.1.0"
   }
 }
