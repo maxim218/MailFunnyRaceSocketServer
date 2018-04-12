@@ -1,0 +1,16 @@
+{
+  "name": "SocketMailServer",
+  "version": "1.0.0",
+  "description": "Maxim Socket Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Maxim",
+  "license": "ISC",
+  "devDependencies": {
+    "ws": "^5.1.1"
+  }
+}
