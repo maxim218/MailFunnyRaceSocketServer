@@ -26,6 +26,12 @@ function sendToAllClients(message) {
 
 let messagesArr = [];
 
+function cutArray() {
+    if(messagesArr.length > 10) {
+        messagesArr.splice(0,1);
+    }
+}
+
 webSocketServer.on("connection", function(ws) {
     let id = "id_" + nameCounter;
     nameCounter++;
@@ -33,6 +39,7 @@ webSocketServer.on("connection", function(ws) {
     console.log("новое соединение " + id);
 
     ws.on("message", function(message) {
+        cutArray();
         if(message === "HELLO_MESSAGE") {
             console.log(message);
         } else {
@@ -53,4 +60,4 @@ webSocketServer.on("connection", function(ws) {
 
 let t1 = setInterval(() => {
     sendToAllClients(JSON.stringify(messagesArr));
-}, 250);
+}, 200);
